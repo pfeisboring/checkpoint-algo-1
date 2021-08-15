@@ -1,0 +1,32 @@
+ALGORITHM longueur
+VAR
+    phrase : STRING;
+    i : INTEGER;
+    count1 : INTEGER :=0;
+    count2 : INTEGER :=0;
+BEGIN
+//length of sentence
+    Read(phrase);
+    Write(phrase.length);
+
+// number of words
+FOR i FROM 0 TO phrase.length STEP 1 DO 
+IF(phrase[i]==' ') THEN 
+count1 := count1 + 1;
+END_IF
+END_FOR
+Write(count1);
+
+
+//number of vowels
+FOR i FROM 0 TO phrase.length STEP 1 DO
+SWITCH (phrase[i]) DO
+    'a' : count2:= count2 + 1 ;BREAK;
+    'e' : count2:= count2 + 1 ;BREAK;
+    'i' : count2:= count2 + 1 ;BREAK;
+    'o' : count2:= count2 + 1 ;BREAK;
+    'u' : count2:= count2 + 1 ;BREAK;
+END_SWITCH
+END_FOR
+Write(count2);
+END
